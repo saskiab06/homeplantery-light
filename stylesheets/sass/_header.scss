@@ -1,0 +1,134 @@
+header {
+  height: 100vh;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 12em;
+  margin-bottom: 1rem;
+
+  .logo {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    background-color: transparent;
+    border: none;
+
+    &__line {
+      width: 30px;
+      height: 4px;
+      background-color: #000;
+
+      &:not(:last-of-type) {
+        margin-bottom: 4px;
+      }
+    }
+    &:hover {
+      .hamburger__line {
+        background-color: #eee;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  ul {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+
+    a {
+      transition: font-weight 0.2s, border-bottom 0.2s;
+
+      &:hover {
+        font-weight: bolder;
+        border-bottom: 1px solid rgb(20, 20, 20);
+      }
+    }
+  }
+}
+
+h1 {
+  position: absolute;
+  left: 50%;
+  top: 350px;
+  transform: translatex(-50%);
+  text-align: center;
+  width: 90%;
+
+  > span {
+    font-weight: bolder;
+    position: absolute;
+    visibility: hidden;
+
+    &#first-text {
+      animation: text-fade 5s ease-in-out infinite;
+      animation-delay: -0.1s;
+      color: #288721;
+    }
+
+    &#second-text {
+      animation: text-fade-2 5s ease-in-out infinite;
+      animation-delay: 2.4s;
+
+      span {
+        color: brown;
+      }
+    }
+  }
+
+  @keyframes text-fade {
+    0% {
+      position: relative;
+      visibility: visible;
+      opacity: 0;
+    }
+
+    25% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+      position: absolute;
+      visibility: hidden;
+    }
+  }
+}
+
+@keyframes text-fade-2 {
+  0% {
+    position: relative;
+    visibility: visible;
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+  }
+}

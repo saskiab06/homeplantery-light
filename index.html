@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homeplantery</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100;300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./stylesheets/css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="content">
+          <nav>
+            <p class="logo">Homeplantery</p>
+            <button id="hamburger" class="hamburger">
+              <span class="hamburger__line"></span>
+              <span class="hamburger__line"></span>
+              <span class="hamburger__line"></span>
+            </button>
+            <ul id="mainNav">
+              <li><a href="#welcome">Welcome</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </nav>
+          <h1 class="hero-text">
+            Live a little <br /><span id="first-text">greener</span
+            ><span id="second-text">closer to your <span>roots</span></span>
+          </h1>
+        </div>
+      </header>
+      <section id="welcome" class="welcome">
+        <h2>Welcome</h2>
+        <div class="welcome__content">
+          <img src="img/lisa.png" alt="Owner Lisa" />
+          <p>
+            We are Lisa and Emilie, two enthusiastic green-thumbed city dwellers
+            who have been bringing a little green to people’s homes, offices,
+            surroundings in Belgium and the Netherlands for over 5 years.
+          </p>
+          <img src="img/emilie.png" alt="Owner Emilie" />
+        </div>
+      </section>
+      <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio__content">
+          <div class="portfolio__content--img">
+            <img src="img/portfolio-1.jpg" alt="portfolio image" />
+          </div>
+          <div class="portfolio__content--img">
+            <img src="img/portfolio-2.jpg" alt="portfolio image" />
+          </div>
+          <div class="portfolio__content--img">
+            <img src="img/portfolio-3.jpg" alt="portfolio image" />
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact__content">
+          <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="mname" />
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" />
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+            <input class="submit-btn" type="submit" value="Send Message" />
+          </form>
+        </div>
+      </section>
+      <button id="toTopBtn" class="top-btn">Back to Top</button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
